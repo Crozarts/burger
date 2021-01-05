@@ -3,8 +3,8 @@ $(function() {
   $.ajax("/burgers", {
     type: "GET"
   }).then(function(data) {
-    var burgersOrdered = $("#burgersOrdered");//was sleepyELem
-    var burgersDevoured = $("#burgersDevoured");//was not sleepelemt
+    var burgersOrdered = $("#burgersOrdered");
+    var burgersDevoured = $("#burgersDevoured");
 
     var burgers = data.burgers;
     var len = burgers.length;
@@ -56,14 +56,11 @@ $(function() {
       dataType:'json',
       contentType: 'application/json'
     }).then(function() {
-      console.log("changed eaten to", newDevour);
-      // Reload the page to get the updated list
       location.reload();
     });
   });
 
   $(".create-form").on("submit", function(event) {
-    // Make sure to preventDefault on a submit event.
     event.preventDefault();
 
     var newBurger = {
@@ -82,8 +79,6 @@ $(function() {
       dataType:'json',
       contentType: 'application/json'
     }).then(function() {
-      console.log("created new burger");
-      // Reload the page to get the updated list
       location.reload();
     });
   });
@@ -91,12 +86,10 @@ $(function() {
   $(document).on("click", ".delete-burger", function(event) {
     var id = $(this).data("id");
 
-    // Send the DELETE request.
+    // delete request
     $.ajax("/burgers/" + id, {
       type: "DELETE"
     }).then(function() {
-      console.log("deleted burger", id);
-      // Reload the page to get the updated list
       location.reload();
     });
   });

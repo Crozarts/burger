@@ -11,18 +11,14 @@ li {
   .create-update-form {
     padding: 5px;
     margin: 5px;
-    background: rgb(131, 131, 131);
+    background:rgb(36, 36, 36);
   }
   
   .form-group {
     margin-bottom: 5px;
-    background-color:grey;
+    color: white;
   }
   
   .center {
     text-align: center;
-  }
-  
-  .background {
-    background-color: rgb(130, 130, 130);
   }

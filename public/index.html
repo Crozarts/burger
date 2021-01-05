@@ -1,42 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="stylesheet" href="/assets/css/style.css" type="text/css" />
-    <title>Welcome to CROZSHACK</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery.js"></script>
-    <script src="/assets/js/index.js"></script>
-  </head>
 
-  <body class=" container center background">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="/assets/css/style.css" type="text/css" />
+  <title>Welcome to CROZSHACK</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="/assets/js/index.js"></script>
+</head>
+
+<body style="background-color: rgb(130, 130, 130)">
+  <div class="container center">
     <div class="row">
-      <h1>Welcome to CrozShack</h1>
-      <h2>We got burgers!</h2>
-      <img src="https://i.pinimg.com/originals/5f/93/03/5f9303c8a1127f572b061c7632bb3d77.jpg" alt="restaurant" style="width: 500px">
+      <h1 style="padding-top:20px">Welcome to CrozShack</h1>
+      <img src="assets/img/CrozShack.png" alt="restaurant" style="width: 500px">
+      <h2>"We've got burgers!"</h2>
     </div>
-    
+
     <div class="row">
-      <h3>Burgers ordered:</h3>
-      <ul style="list-style-position: inside" id="burgersOrdered"></ul>
-
-      <h3>Burgers eaten:</h3>
-      <ul style="list-style-position: inside" id="burgersDevoured"></ul>
-
-      <h2>What's your Order?</h2>
-      <h4>Examples: Bacon Cheese Burger, Hamburger, Cheeseburger, Veggie.. etc.</h4>
-      <form class="create-form">
-        <div class="form-group">
-          <label for="ca">Burger Order:</label>
-          <input type="text" id="ca" name="name" />
+      <div class="col-sm-6">
+        <div class="card">
+          <div class="card-body">
+            <h3 class="card-title">Burgers Ordered:</h3>
+            <ul style="list-style-position: inside" id="burgersOrdered"></ul>
+          </div>
         </div>
-    </div>
-    <div class="form-group">
-      <input type="radio" name="devoured" value="1" checked /> To order<br />
-      <input type="radio" name="devoured" value="0" /> Has been eaten before
+      </div>
+      <div class="col-sm-6">
+        <div class="card">
+          <div class="card-body">
+            <h3 class="card-title">Burgers Eaten:</h3>
+            <ul style="list-style-position: inside" id="burgersDevoured"></ul>
+          </div>
+        </div>
+      </div>
     </div>
 
-      <button type="submit">Add Burger</button>
-    </form>
-  </body>
+    <div class="row">
+      <div class="container" style="margin:10px; background-color:rgb(36, 36, 36)">
+        <h2 style="color:white">What's your Order?</h2>
+        <h4 style="color:white">Examples: Bacon Cheese Burger, Hamburger, Cheeseburger, Veggie.. etc.</h4>
+        <form class="create-form">
+          <div class="form-group">
+            <label for="ca">Burger Order:</label>
+            <input type="text" id="ca" name="name" />
+          </div>
+          <div class="form-group">
+            <input type="radio" name="devoured" value="1" checked /> To order<br />
+            <input type="radio" name="devoured" value="0" /> Has been eaten before
+          </div>
+          <button type="submit">Add Burger</button>
+        </form>
+      </div>
+    </div>
+</body>
+
 </html>
